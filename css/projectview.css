@@ -1,0 +1,305 @@
+#mainlist {
+    display: none;
+    list-style: none;
+}
+
+#multiprint {
+    list-style: none;
+    display: block;
+    position: absolute;
+    right: 155px;
+}
+
+#moreformate {
+    cursor: pointer;
+}
+
+#multiprint li a img {
+    height: 20px;
+    width: 15px;
+}
+
+#prev {
+    /*transform: rotate(90deg);*/
+}
+
+#next {
+    transform: rotate(180deg);
+}
+
+#last {
+    transform: rotate(180deg);
+}
+
+#btnfind {
+    vertical-align: middle;
+}
+
+#navlist {
+    display: none;
+    list-style: none;
+}
+
+.navigation {
+    list-style: none;
+    display: block;
+    position: absolute;
+    right: 35px;
+    text-align: left;
+    background-color: white;
+}
+.table.InfoForm {
+    border: 1px solid #999;
+}
+
+.class-link {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#listprojectvendor_length select,
+.dataTables_filter input[type="text"] {
+    width: 20%;
+}
+
+.paging_full_numbers {
+    width: 250px;
+    height: 22px;
+    line-height: 22px;
+    padding-top: 9%;
+}
+
+.dataTables_info {
+    width: 40%;
+    float: left;
+    padding-top: 7%;
+    padding-bottom: -26px;
+    padding-left: 10px;
+    color: #000;
+}
+
+.td_short {
+    width: 206px;
+    white-space: nowrap;
+}
+ /* prograss bar */
+
+ .legend {
+    margin-bottom: 1px;
+    width: auto;
+}
+
+#progressbox {
+    border: 1px solid #CAF2FF;
+    padding: 1px;
+    position: relative;
+    width: 400px;
+    border-radius: 3px;
+    margin: 10px;
+    display: none;
+    text-align: left;
+}
+
+#progressbar {
+    height: 20px;
+    border-radius: 3px;
+    background-color: #CAF2FF;
+    width: 1%;
+}
+
+#statustxt {
+    top: 3px;
+    left: 50%;
+    position: absolute;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.completed_link a {
+    color: #1278E0;
+}
+
+
+
+#mainlist {
+    display: none;
+    list-style: none;
+}
+
+#multiprint {
+    list-style: none;
+    display: block;
+    position: absolute;
+    right: 155px;
+}
+
+#moreformate {
+    cursor: pointer;
+}
+
+#multiprint li a img {
+    height: 20px;
+    width: 15px;
+}
+
+#prev {
+    /*transform: rotate(90deg);*/
+}
+
+#next {
+    transform: rotate(180deg);
+}
+
+#last {
+    transform: rotate(180deg);
+}
+
+#btnfind {
+    vertical-align: middle;
+}
+
+#navlist {
+    display: none;
+    list-style: none;
+}
+
+.navigation {
+    list-style: none;
+    display: block;
+    position: absolute;
+    right: 35px;
+    text-align: left;
+    background-color: white;
+}
+table.InfoForm {
+    border: 1px solid #999;
+}
+
+.class-link {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#listprojectvendor_length select,
+.dataTables_filter input[type="text"] {
+    width: 20%;
+}
+
+.paging_full_numbers {
+    width: 250px;
+    height: 22px;
+    line-height: 22px;
+    padding-top: 9%;
+}
+
+.dataTables_info {
+    width: 40%;
+    float: left;
+    padding-top: 7%;
+    padding-bottom: -26px;
+    padding-left: 10px;
+    color: #000;
+}
+
+.td_short {
+    width: 206px;
+    white-space: nowrap;
+}
+legend {
+    margin-bottom: 1px;
+    width: auto;
+}
+
+#progressbox {
+    border: 1px solid #CAF2FF;
+    padding: 1px;
+    position: relative;
+    width: 400px;
+    border-radius: 3px;
+    margin: 10px;
+    display: none;
+    text-align: left;
+}
+
+#progressbar {
+    height: 20px;
+    border-radius: 3px;
+    background-color: #CAF2FF;
+    width: 1%;
+}
+
+#statustxt {
+    top: 3px;
+    left: 50%;
+    position: absolute;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.completed_link a {
+    color: #1278E0;
+}
+
+.overlay {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.7);
+                transition: opacity 500ms;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .overlay:target {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .popup {
+                margin: 70px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 5px;
+                width: 30%;
+                position: relative;
+                transition: all 5s ease-in-out;
+            }
+
+            .popup h2 {
+                margin-top: 0;
+                color: #333;
+                font-family: Tahoma, Arial, sans-serif;
+            }
+
+            .popup .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+            }
+
+            .popup .close:hover {
+                color: #06D85F;
+            }
+
+            .popup .content {
+                max-height: 30%;
+                overflow: auto;
+            }
+
+            @media screen and (max-width: 700px) {
+                .box {
+                    width: 70%;
+                }
+
+                .popup {
+                    width: 70%;
+                }
+            }
+            
