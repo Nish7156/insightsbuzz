@@ -12,7 +12,7 @@ include('includes/navbar.php');
         <label for="lastName" style="    margin-left: 47px;">Parent Company:</label>
         <input type="text" name="parent_company_name" id="parent_company" style="    margin-left: 17px;">
     </p>
-
+<h1>nish</h1>
     <p style="margin-left: 174px;">
         <label for="Gender">Display Name:</label>
         <input type="text" name="display_name" id="display_name" style="margin-left:27px;">
