@@ -91,13 +91,13 @@ if(isset($_POST['addproject']) ) {
     $note = '0'; //$_REQUEST['note'];
     $points_to_award = '1';
     $id = get_id_of_project($conn);
-    $completion_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=1';
-    $disqualify_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=2';
-    $quotafull_link= 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=3';
+    $completion_link = 'http://insightsbuzz.ga/endcapture.php?cada='.$id.'&st=1';
+    $disqualify_link = 'http://insightsbuzz.ga/endcapture.php?cada='.$id.'&st=2';
+    $quotafull_link= 'http://insightsbuzz.ga/endcapture.php?cada='.$id.'&st=3';
     $sql = "INSERT INTO projects(project_name, project_friendly_name, client_name, parent_project, project_manager, country, client_contact, sales_person, req_complete, cpc, ir, survey_link, status, max_complete,loi, note, points_to_award, completion_link, disqualify_link, quotafull_link) VALUES ('$project_name', '$project_friendly_name', '$client_name', '$parent_project', '$project_manager', '$country', '$client_contact', '$sales_person', '$req_complete', '$cpc', '$ir', '$survey_link', '$status', '$max_complete', '$loi', '$note', '$points_to_award', '$completion_link','$disqualify_link','$quotafull_link')";
     if(mysqli_query($conn, $sql)){
       echo 'addproject <br>';
-     
+      
     } 
     else{
 			echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
@@ -117,12 +117,12 @@ if(isset($_POST['addproject']) ) {
       $req_complete = 0;
       $max_complete = 0;
       $max_redirects = 0;
-      $completion_link = 'http://www.insightskv.ml/complete.php?pid={{panellist_id}}';
-      $disqualify_link =  'http://www.insightskv.ml/terminate.php?pid={{panellist_id}}';
-      $quotafull_link = "http://www.insightskv.ml/quotafull.php?pid={{panellist_id}}";
+      $completion_link = 'http://www.insightsbuzz.ga/complete.php?pid={{panellist_id}}';
+      $disqualify_link =  'http://www.insightsbuzz.ga/terminate.php?pid={{panellist_id}}';
+      $quotafull_link = "http://www.insightsbuzz.ga/quotafull.php?pid={{panellist_id}}";
       $project_status = 'running';
       $notes = 1;
-      $survey_link = 'http://insightskv.ml/capture.php?gid='.$project_id.'&vid='.$vendor_id.'&pid=';
+      $survey_link = 'http://insightsbuzz.ga/capture.php?gid='.$project_id.'&vid='.$vendor_id.'&pid=';
       // $timestamp = $_REQUEST[''];
       
       $sql = "INSERT INTO project_vendors(project_id, vendor_id, redirects, completed, disqualified, qf, ir, cpc,cost_per_complete, req_complete, max_complete, max_redirects, completion_link, disqualify_link, quotafull_link, project_status, notes, survey_link) VALUES (' $project_id','1','$redirects','$completed','$disqualified','$qf','$ir','$cpc','$cost_per_complete','$req_complete','$max_complete','$max_redirects','$completion_link','$disqualify_link','$quotafull_link','$project_status','$notes','$survey_link')";
@@ -135,7 +135,7 @@ if(isset($_POST['addproject']) ) {
          }
 
     }
-    adddefaultvendor($conn,$id);
+   adddefaultvendor($conn,$id); 
 }
 
 function get_id_of_project($conn){
@@ -166,7 +166,7 @@ if(isset($_POST['add_project_vendors'])){
   $quotafull_link = $_REQUEST['quotafull_link'];
   $project_status = $_REQUEST['status'];
   $notes = $_REQUEST['notes'];
-  $survey_link = 'http://insightskv.ml/capture.php?gid='.$project_id.'&vid='.$vendor_id.'&pid=';
+  $survey_link = 'http://insightsbuzz.ga/capture.php?gid='.$project_id.'&vid='.$vendor_id.'&pid=';
   // $timestamp = $_REQUEST[''];
   
   $sql = "INSERT INTO project_vendors(project_id, vendor_id, redirects, completed, disqualified, qf, ir, cpc,cost_per_complete, req_complete, max_complete, max_redirects, completion_link, disqualify_link, quotafull_link, project_status, notes, survey_link) VALUES ('$project_id','$vendor_id','$redirects','$completed','$disqualified','$qf','$ir','$cpc','$cost_per_complete','$req_complete','$max_complete','$max_redirects','$completion_link','$disqualify_link','$quotafull_link','$project_status','$notes','$survey_link')";

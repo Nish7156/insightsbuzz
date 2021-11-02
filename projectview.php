@@ -677,9 +677,9 @@ $result1 = mysqli_query($conn, $sql2);
                     <h1>Redirects links</h1>
                     <div class="container">
                         <div class="row">
-                            <div><div id="p1">http://insightskv.ml/endcapture.php?st=1</div><button onclick="copyToClipboard('#p1')">Copy</button></div>
-                            <div><div id="p2">http://insightskv.ml/endcapture.php?st=2</div><button onclick="copyToClipboard('#p2')">Copy</button></div>
-                            <div><div id="p3">http://insightskv.ml/endcapture.php?st=3</div><button onclick="copyToClipboard('#p3')">Copy</button></div>
+                            <div><div id="p1">http://insightsbuzz.ga/endcapture.php?st=1</div><button onclick="copyToClipboard('#p1')">Copy</button></div>
+                            <div><div id="p2">http://insightsbuzz.ga/endcapture.php?st=2</div><button onclick="copyToClipboard('#p2')">Copy</button></div>
+                            <div><div id="p3">http://insightsbuzz.ga/endcapture.php?st=3</div><button onclick="copyToClipboard('#p3')">Copy</button></div>
                         </div>
                     </div>
                 </section>
@@ -714,12 +714,8 @@ function copyToClipboard(element) {
                                     <td colspan=11 style="text-align: left;" class="header">Project Research Statistics
                                     </td>
                                 </tr>
-<?php
- $sql = "SELECT * FROM project_vendors WHERE id = $id";
- $result7 = $conn->query($sql);
- $count_quotafull = mysqli_num_rows($result7);
 
-?>
+
                                 <!--text here-->
                                 <tr class="odd">
                                     <td style="text-align: left">Redirects</td>
@@ -739,11 +735,10 @@ function copyToClipboard(element) {
 
                                 <!--code here-->
                                 <tr class="even">
-                                <?php  foreach($result7 as $row7){?>
-                                    <td style="text-align: center">129 / <span style="color: #1278E0;">80.6%</span></td>
-                                    <td style="text-align: center">5 / <span style="color: #1278E0;">3.1%</span></td>
-                                    <td style="text-align: center">81 / <span style="color: #1278E0;">62.8%</span></td>
-                                    <td style="text-align: center">9 / <span style="color: #1278E0;">7%</span></td>
+                                     <td style="text-align: center"><?php echo $count_redirects;?> / <span style="color: #1278E0;"><?php echo $count_redirects/1000*100;?>%</span></td>
+                                    <td style="text-align: center"><?php echo $count_completed; ?> / <span style="color: #1278E0;"><?php echo $count_completed/1000*100;?>%</span></td>
+                                    <td style="text-align: center"><?php echo $count_disqualified; ?> / <span style="color: #1278E0;"><?php echo $count_disqualified/1000*100;?>%</span></td>
+                                    <td style="text-align: center"><?php echo $count_quotafull; ?> / <span style="color: #1278E0;"><?php echo $count_quotafull/1000*100;?>%</span></td>
                                     <td style=color:red; style="text-align: center">5.81 %</td>
                                     <td style=color:red; style="text-align: center">26.36 %</td>
                                     <td style="text-align: center;background: #81BFFF;">
@@ -761,7 +756,7 @@ function copyToClipboard(element) {
                                             value="" checked /></td>
                                     <td style="text-align: center">-</td>
                                     <td style="text-align: center">-</td>
-                                    <?php }?>
+
                                 </tr>
 
                             </tbody>
