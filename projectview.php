@@ -659,7 +659,7 @@ $result1 = mysqli_query($conn, $sql2);
                 </tr>
                 <tr>
                  <td>
-                <a href="#" id="myBtn">Link Variable[123]</a>
+                <a href="#" id="myBtn">Link Variable[45]</a>
                 </td>
                 </tr>
                 </table>
